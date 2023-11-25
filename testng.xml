@@ -1,0 +1,68 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+
+
+            <class name="Tests.AddToCartTest">
+                <methods>
+                    <include name = "productNameIsDisplayed"/>
+                    <include name = "removeProductFromShoppingCart"/>
+                    <include name = "updateShoppingCart"/>
+                    <include name = "setProductQuantity"/>
+
+
+                </methods>
+            </class>
+            <class name="Tests.SearchTest">
+                <methods>
+                    <include name="SearchForMacProduct"/>
+                    <include name="NavigateToMacProduct"/>
+                </methods>
+            </class>
+            <class name="Tests.HoverTest">
+                <methods>
+                    <include name="HoverOverComputer"/>
+                    <include name="HoverOverElectronics"/>
+                    <include name="HoverOverApparel"/>
+                </methods>
+            </class>
+            <class name="Tests.AddToCartTest">
+                <methods>
+                    <include name="SearchForMacProduct"/>
+                    <include name="NavigateToMacProduct"/>
+                    <include name="addProductToCart"/>
+                </methods>
+            </class>
+
+            <class name="Tests.CheckOutTest">
+                <methods>
+                    <include name="NavigateToRegisterPage"/>
+                    <include name="RegisterNewUser"/>
+                    <include name="navigateToLoginPage"/>
+                    <include name="Login"/>
+                    <include name="SearchForMacProduct"/>
+                    <include name="NavigateToMacProduct"/>
+                    <include name="addProductToCart"/>
+                    <include name="navigateToCheckOut"/>
+                    <include name="completeCheckOut"/>
+                </methods>
+            </class>
+            <class name="Tests.RegisterTest">
+                <methods>
+                    <include name="NavigateToRegisterPage"/>
+                    <include name="RegisterNewUser"/>
+                </methods>
+            </class>
+            <class name="Tests.LoginTest">
+                <methods>
+                    <include name="NavigateToRegisterPage"/>
+                    <include name="RegisterNewUser"/>
+                    <include name="navigateToLoginPage"/>
+                    <include name="Login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
